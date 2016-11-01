@@ -10,20 +10,9 @@ public class IntroActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_intro);
+       //TODO set content view with corresponding xml
 
-
-        findViewById(R.id.btn_camera_share).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(IntroActivity.this,CameraActivity.class));
-            }
-        });
-        findViewById(R.id.btn_photo_dist).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(IntroActivity.this,TakePhotoActivity.class));
-            }
-        });
+        //TODO map view defined in xml (with their id) to a new click behaviour
+        //   (help :    findViewById,  R.id.xxxxx , setOnClickListener, startActivity
     }
 }

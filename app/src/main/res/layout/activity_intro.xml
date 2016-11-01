@@ -12,20 +12,9 @@
     tools:context="thirdplace.orange.com.photoserver.IntroActivity">
 
 
-    <Button
-        android:id="@+id/btn_camera_share"
-        android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="1"
-        android:text="Partager ma caméra"
-        android:gravity="center"/>
-
-    <Button
-        android:id="@+id/btn_photo_dist"
-        android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="Prendre des photos à distance"/>
+  <!--TODO add 2 buttons to select mode :
+    - the first navigates to TakePhotoActivity
+    - the second navigates to CameraActivity
+  -->
 
 </LinearLayout>
