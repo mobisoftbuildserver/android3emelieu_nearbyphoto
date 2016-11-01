@@ -91,8 +91,8 @@ public class TakePhotoActivity extends AppCompatActivity implements GoogleApiCli
             .setTtlSeconds(TTL_IN_SECONDS).build();
 
     //views defined in layout xml file
-    private View mButtonPhoto;
-    private View mButtonPhotoText;
+    //TODO   declare views
+
 
     //global variables
     private GoogleApiClient mGoogleApiClient;
@@ -108,16 +108,9 @@ public class TakePhotoActivity extends AppCompatActivity implements GoogleApiCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_takephoto);
         tryLoadEmailAccount();
-        mButtonPhoto = findViewById(R.id.takePhoto);
-        mButtonPhoto.setEnabled(false);
-        mButtonPhotoText = findViewById(R.id.takePhotoText);
-        mButtonPhoto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                publish();
-            }
-        });
         buildGoogleApiClient();
+
+        //TODO initiate declared views
     }
 
     /**
@@ -162,7 +155,6 @@ public class TakePhotoActivity extends AppCompatActivity implements GoogleApiCli
     //called when google service connection has failed
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-        mButtonPhoto.setEnabled(false);
     }
 
     @Override
@@ -172,7 +164,7 @@ public class TakePhotoActivity extends AppCompatActivity implements GoogleApiCli
     @Override
     public void onConnected(@Nullable Bundle bundle) {
         Log.i(TAG, "GoogleApiClient connected");
-        mButtonPhoto.setEnabled(true);
+        //TODO   we can now click on take photo button!!
     }
 
     /**
