@@ -181,7 +181,7 @@ public class TakePhotoActivity extends AppCompatActivity implements GoogleApiCli
      */
     private void publish() {
 
-        //TODO !!!
+        //TODO !!!   @see https://developers.google.com/nearby/messages/android/pub-sub
     }
 
 
