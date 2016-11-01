@@ -180,32 +180,8 @@ public class TakePhotoActivity extends AppCompatActivity implements GoogleApiCli
      * TTLs.
      */
     private void publish() {
-        PublishOptions options = new PublishOptions.Builder()
-                .setStrategy(PUB_SUB_STRATEGY)
-                .setCallback(new PublishCallback() {
-                    @Override
-                    public void onExpired() {
-                        super.onExpired();
-                        Log.i(TAG, "No longer publishing");
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                            }
-                        });
-                    }
-                }).build();
-        mPubMessage = DeviceMessage.newNearbyMessage(UUID.randomUUID().toString(), email);
-        Nearby.Messages.publish(mGoogleApiClient, mPubMessage, options)
-                .setResultCallback(new ResultCallback<Status>() {
-                    @Override
-                    public void onResult(@NonNull Status status) {
-                        if (status.isSuccess()) {
-                            Log.i(TAG, "Published successfully.");
-                        } else {
-                            Log.i(TAG, "Could not publish, status = " + status);
-                        }
-                    }
-                });
+
+        //TODO !!!
     }
 
 
